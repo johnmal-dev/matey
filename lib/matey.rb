@@ -13,6 +13,8 @@ require_relative "../app/components/matey/user_engagement_component"
 require_relative "../app/components/matey/daily_active_users_component"
 require_relative "../app/components/matey/visits_by_day_of_week_component"
 require_relative "../app/components/matey/browser_os_breakdown_component"
+require_relative "../app/components/matey/page_count_per_session_component"
+require_relative "../app/components/matey/chartkick_component"
 
 module Matey
   class Error < StandardError; end

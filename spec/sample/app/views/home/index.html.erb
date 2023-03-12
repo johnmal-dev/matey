@@ -29,4 +29,13 @@
   <div class="col d-flex align-items-stretch mt-3">
     <%= render(Matey::VisitsByDayOfWeekComponent.new(visits: Ahoy::Visit.all, exclude_days: ["Monday", "Tuesday"])) %>
   </div>
+  <div class="col-3 d-flex align-items-stretch mt-3">
+    <%= render(Matey::PageCountPerSessionComponent.new(events: Ahoy::Event.all, visits: Ahoy::Visit.all, time_window: 1.month)) %>
+  </div>
+  <div class="col-3 d-flex align-items-stretch mt-3">
+    <%= render(Matey::ChartkickComponent.new()) %>
+  </div>
+  <div class="col-3 d-flex align-items-stretch mt-3">
+    <%= line_chart [["2021-01-01", 2], ["2021-01-02", 3]] %>
+  </div>
 </div>
